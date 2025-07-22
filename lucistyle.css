@@ -1,0 +1,295 @@
+body {
+    background-color: rgb(249, 232, 234);
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+}
+
+.headerimage {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(luca.jpg);
+    background-size: cover;
+    z-index: 10000;
+    font-size: 2em;
+
+}
+
+.header {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+    text-align: left;
+    background-color: rgb(255, 246, 233);
+    display: flex;
+    flex-direction: row;
+    padding-top: 16vh;
+    padding-left: 10vw; 
+    transition: top 1s ease;
+    transition-delay: 2s;
+}
+
+.lucaimage {
+    height: 65vh;
+    width: 45vw;
+    border-radius: 60px 10px 10px 60px;
+    position: absolute;
+    top: 15vh;
+    left: -50vw;
+    transition: left 1s ease;
+}
+
+.lucaimage.appeared {
+    left: 7vw;   
+}
+
+.headertext {
+    font-family: "Ubuntu";
+    font-weight: 500;
+    font-style: normal;
+    font-size: 6em;
+    color: rgb(255, 246, 233);
+    background-color: rgb(221, 127, 151);
+    border-radius: 10px 60px 60px 10px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    margin-left: 3vw;
+    margin-top: 0;
+    padding-bottom: 4vh;
+    line-height: 1.4em;
+    position: absolute;
+    top: 15vh;
+    left: 100vw;
+    transition: left 1s ease;
+}
+
+.headertext.appeared {
+    left: 51vw;
+}
+
+.header.disappear {
+    top: -120vh;
+}
+
+.backenv {
+    height: 49.8vh;
+    width: 39.8vw;
+    background-color: rgb(173, 169, 163);
+    z-index: 0;
+}
+
+#flap {
+	width: 0;
+	height: 0;
+	border-left: 20vw solid transparent;
+	border-right: 20vw solid transparent;
+	border-top: 34vh solid #ffffff;
+    transition: border-top 1s ease;
+    z-index: 200;
+    transition-delay: 0.8s;
+}
+
+#flap.moved {
+    border-top: 0 solid #ffffff;
+    transition-delay: 0s;
+}
+
+#envelope {
+    position: relative;
+    top: 0;
+    transition: top 0.5s ease
+}
+
+#envelope.moved {
+    top: 160px;
+}
+
+.topflap {
+    border-bottom:28vh solid #e8e6e6;
+	border-left: 13vw solid transparent;
+	border-right: 13vw solid transparent;
+	height: 22vh;
+	width: 14vw;
+    z-index: 100;
+}
+
+.leftflap {
+    width: 0;
+	height: 0;
+	border-top: 25vh solid transparent;
+	border-left: 18vw solid #d4d2d2;
+	border-bottom: 25vh solid transparent;
+    z-index: 50;
+}
+
+.rightflap {
+    width: 22vw;
+	height: 0;
+	border-top: 25vh solid transparent;
+	border-right: 18vw solid #d4d2d2;
+	border-bottom: 25vh solid transparent;
+    z-index: 50;
+}
+
+#envelope {
+    position: absolute;
+    margin-top: 20vh;
+    justify-content: center;
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    top: 0vh;
+    transition: top 0.5s ease;
+}
+
+.letterel {
+    grid-area: 1 / 1;
+    border-radius: 20px;
+}
+
+.backenv {
+    z-index: 0;
+}
+
+#letter {
+    position: absolute;
+    height: 49.8vh;
+    width: 34vw;
+    margin-left: 1vw;
+    background-color: rgb(255, 246, 233);
+    z-index: 1;
+    color: rgb(221, 127, 151);
+    padding-left: 2vw;
+    padding-right: 2vw;
+    font-family: "Coming Soon", cursive;
+    font-weight: 400;
+    font-style: normal;
+    top: 0;
+    transition: top 1s ease;
+    transition-delay: 0s;
+}
+
+#letter.moved {
+    top: -250px;
+    transition-delay: 1s;
+}
+
+body {
+    cursor: url(heart2.png) 16 15, auto;
+}
+
+.stars {
+    width: 1vw;
+    height: 2vh;
+    position: absolute;
+    top: 68vh;
+    z-index: 5;
+    transition-delay: 0s;
+    opacity: 0
+}
+
+.stars.moved {
+    width: 2vw;
+    height: 4vh;
+    opacity: 1;
+    transition-delay: 0.2s;
+    transition: top 0.6s ease-out, left 0.8s ease-in, height 1s ease, width 1s ease, opacity 1s ease;
+}
+
+#star1 {
+    left: 40vw;
+}
+
+#star2 {
+    left: 60vw;
+}
+
+#star3 {
+    left: 50vw;
+}
+
+#star4 {
+    left: 55vw;
+}
+
+#star1.moved {
+    left: 20vw;
+    top: 30vh;
+}
+
+#star2.moved {
+    left: 75vw;
+    top: 25vh;
+}
+
+#star3.moved {
+    left: 10vw;
+    top: 40vh;
+}
+
+#star4.moved {
+    left: 85vw;
+    top: 35vh;
+}
+
+#star5 {
+    left: 40vw;
+}
+
+#star6 {
+    left: 60vw;
+}
+
+#star7 {
+    left: 50vw;
+}
+
+#star8 {
+    left: 55vw;
+}
+
+#star5.moved {
+    left: 20vw;
+    top: 50vh;
+}
+
+#star6.moved {
+    left: 75vw;
+    top: 55vh;
+}
+
+#star7.moved {
+    left: 5vw;
+    top: 20vh;
+}
+
+#star8.moved {
+    left: 90vw;
+    top: 20vh;
+}
+
+#seal {
+    width: 3vw;
+    height: 6vh;
+    position: absolute;
+    top: 29vh;
+    left: 18.5vw;
+    z-index: 1000;
+    transition: top 1s ease, height 1s ease;
+    transition-delay: 0.8s;
+    border-radius: 0px;
+}
+
+#seal.moved {
+    height: 0vh;
+    top: 0vh;
+    transition-delay: 0s;
+}
